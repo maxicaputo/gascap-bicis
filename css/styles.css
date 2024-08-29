@@ -9,6 +9,7 @@ body {
     line-height: 1.6;
     background-color: #f3f3f3;
     color: #720d0d;
+    
 }
 
 header {
@@ -17,8 +18,9 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background: #fff;
+    background: #effa53;
     border-bottom: 1px solid #ddd;
+    
 }
 
 .logo img {
@@ -33,6 +35,7 @@ nav ul {
     display: flex;
     list-style: none;
     gap: 15px;
+    justify-content: center;
     
 }
 
@@ -178,6 +181,8 @@ footer {
 .tarjeta img {
     max-width: 1000px;
 }
+
+/*la parte mas rompe cabezas*/
 
 @media (max-width: 768px) {
     header {
