@@ -1,0 +1,275 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f3f3f3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #442d2d;
+    padding: 10px 20px;
+    color: rgb(119, 16, 16);
+}
+
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: flex;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: #1a1818;
+    border-radius: 5px;
+}
+
+.busqueda {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.busqueda input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.busqueda button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.busqueda img {
+    height: 20px;
+}
+
+.cart img, .favorites img, .perfil img {
+    height: 30px;
+    margin-left: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+#inicio {
+    text-align: center;
+}
+
+
+.gascap-products {
+    margin-top: 20px;
+}
+
+.latest-products h2 {
+    margin-bottom: 20px;
+}
+
+.product-futuro {
+    display: flex;
+    justify-content: center;
+}
+
+#accesorios {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+#accesorios h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-accesorios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: calc(25% - 40px); 
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.product button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product button a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #442d2d;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.tarjeta img {
+    height: 20px;
+    margin-top: none;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.slide{
+    padding-top: 0px;
+}
+.slide img{
+    height: 85vh;
+}
+
+.slide p{
+    color: red;
+}
+
+.slide h5{
+    color: #1a1818;
+}
+
+
+
+
+/*PARTE LOGIN*/
+
+.cuenta-login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #666;
+}
+
+.input-group input[type="email"], .input-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.input-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #218838;
+}
+
+.optiones {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.optiones a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.optiones a:hover {
+    text-decoration: underline;
+}
+
+.abajo {
+    margin-top: 300px;
+}
+
+
+/*COMO ME HACES QUEMAR LA CABEZA MOBILE FIRST*/
+
+
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+}
+
