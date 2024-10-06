@@ -10,40 +10,51 @@
 <body>
     <header>
         <div class="logo">
-            <img src="../img/gascap logo.png" alt="Logo" style="height: 50px;">
+            <img src="../img/gascap logo.png" alt="Logo">
         </div>
-        <button class="abrir-menu"></button>
-        <nav class="nav">
-            <button class="abrir-menu"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-              </svg></button>
-            <ul class="nav-list">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./bicicletas.html">Bicicletas</a></li>
-                <li><a href="./indumentaria.html">Indumentaria</a></li>
-                <li><a href="#">Accesorios</a></li>
-                <li><a href="./micuenta.html">Mi Cuenta</a></li>
-            </ul>
-        </nav>
-        <div class="busqueda">
-            <input type="text" placeholder="Buscar...">
-            <button>
-                <img src="../img/simbolo-de-la-interfaz-de-busqueda.png" alt="lupa">
-            </button>
-            <div class="carrito">
+    
+        <!-- Checkbox para activar el menú de hamburguesa -->
+        <input type="checkbox" id="menu-toggle">
+    
+        <!-- Botón de menú hamburguesa -->
+        <label for="menu-toggle" class="menu-btn">
+            <span></span>
+        </label>
+    
+        <!-- Menú desplegable de hamburguesa -->
+        <div class="menu">
+            <!-- Navegación dentro del menú desplegable -->
+            <nav>
+                <ul>
+                    <li><a href="../index.html" class="active">Inicio</a></li>
+                    <li><a href="./bicicletas.html">Bicicletas</a></li>
+                    <li><a href="./indumentaria.html">Indumentaria</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="./micuenta.html">Mi Cuenta</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Elementos de búsqueda y botones dentro del menú desplegable -->
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar...">
                 <button>
-                <img src="../img/carrito-de-compras.png" alt="carrito">
-            </button>
-            </div>
-            <div class="favorito">
-                <button>
-                <img src="../img/favorito.png" alt="favorito">
-            </button>
-            </div>
-            <div class="perfil">
-                <button>
-                    <img src="../img/avatar-de-usuario.png" alt="user">
+                    <img src="../img/simbolo-de-la-interfaz-de-busqueda.png" alt="lupa">
                 </button>
+                <div class="carrito">
+                    <button>
+                        <img src="../img/carrito-de-compras.png" alt="carrito">
+                    </button>
+                </div>
+                <div class="favorito">
+                    <button>
+                        <img src="../img/favorito.png" alt="favorito">
+                    </button>
+                </div>
+                <div class="perfil">
+                    <button>
+                        <img src="../img/avatar-de-usuario.png" alt="user">
+                    </button>
+                </div>
             </div>
         </div>
     </header>

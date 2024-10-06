@@ -12,33 +12,6 @@ body {
     
 }
 
-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background: #effa53;
-    border-bottom: 1px solid #ddd;
-    
-}
-
-.logo img {
-    height: 50px;
-}
-
-nav {
-    flex: 1;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 15px;
-    justify-content: center;
-    
-}
-
 nav a {
     text-decoration: none;
     color: #333;
@@ -185,20 +158,6 @@ footer {
 
 
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .busqueda {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
 
     .product {
         flex: 1 1 calc(50% - 30px);
@@ -212,5 +171,185 @@ footer {
 
     .tarjeta img {
         max-width: 80px;
+    }
+}
+
+
+
+/*     */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #effa53;
+    color: #333;
+    position: relative;
+}
+
+/* Estilos del logo */
+.logo img {
+    height: 50px;
+}
+
+/* Estilos para el botón hamburguesa */
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 60px;
+    width: 30px;
+    height: 20px;
+}
+
+/* Líneas del botón hamburguesa */
+.menu-btn::before,
+.menu-btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: transform 0.3s, top 0.3s, bottom 0.3s;
+}
+.menu-btn::before {
+    top: 5px;
+}
+.menu-btn::after {
+    bottom: 5px;
+}
+
+/* Menú desplegable */
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #effa53;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 5;
+}
+
+.menu nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.menu nav ul li {
+    margin: 15px 0;
+}
+
+.menu nav ul li a {
+    color: #333;
+    font-size: 18px; /* Reduced font size */
+    text-decoration: none;
+}
+
+/* Estilos del contenedor de búsqueda */
+.menu .busqueda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.menu .busqueda input {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 80%;
+    max-width: 300px;
+}
+
+.menu .busqueda button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Checkbox oculto */
+#menu-toggle {
+    display: none;
+}
+
+/* Cambios cuando el menú está activo */
+#menu-toggle:checked + .menu-btn::before {
+    transform: rotate(45deg);
+    top: 50%;
+}
+
+#menu-toggle:checked + .menu-btn::after {
+    transform: rotate(-45deg);
+    bottom: 50%;
+}
+
+#menu-toggle:checked ~ .menu {
+    transform: translateX(0);
+}
+
+/* Mostrar el botón de menú en pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    body {
+        padding-top: 70px; /* Ajuste para evitar que el contenido quede debajo del header */
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+}
+
+/* Estilo del menú en pantallas grandes */
+@media (min-width: 769px) {
+    .menu {
+        position: static;
+        transform: translateX(0);
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        width: auto;
+    }
+
+    .menu nav ul {
+        display: flex;
+        justify-content: center; /* Center the navigation items */
+        gap: 20px;
+        text-align: center; /* Center the text within each item */
+    }
+
+    .menu nav ul li {
+        margin: 0;
+    }
+
+    .menu .busqueda {
+        flex-direction: row;
+        margin-top: 0;
+        gap: 10px;
+    }
+
+    .menu .busqueda input {
+        width: auto;
+        max-width: 200px;
+    }
+
+    /* Ocultar el botón hamburguesa en pantallas grandes */
+    .menu-btn {
+        display: none;
     }
 }
